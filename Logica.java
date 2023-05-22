@@ -33,11 +33,9 @@ public class Logica {
             for (int j = 0; j < coluna; j++) {
                 if (i > j) {
                     Logica[i][j] = 1;
-                }
-                if (i == j) {
+                }else if (i == j) {
                     Logica[i][j] = 0;
-                }
-                if (j > i) {
+                }else {
                     Logica[i][j] = 2;
                 }
             }
@@ -54,6 +52,7 @@ public class Logica {
         while (tenteNovamente) {
             System.out.println("Digite um Nº");
             int nDigitado = sc.nextInt();
+            System.out.println("Você tentou "+contador+ ".")
             if (nDigitado == valorSorteado) {
                 System.out.println("Acertouuuu!!!!!!!");
                 tenteNovamente = false;
